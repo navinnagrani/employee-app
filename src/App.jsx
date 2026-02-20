@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import EmployeeList from "./components/EmployeeList";
+import AddEmployee from "./components/AddEmployee";
+import { useState } from "react";
+import "./styles/global.css";
 
 function App() {
+  const [refreshFlag, setRefreshFlag] = useState(false);
+
+  const refresh = () => {
+    setRefreshFlag(!refreshFlag);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <AddEmployee refresh={refresh} />
+      <EmployeeList key={refreshFlag} />
     </div>
   );
 }

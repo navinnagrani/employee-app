@@ -1,0 +1,26 @@
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
